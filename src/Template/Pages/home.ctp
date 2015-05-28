@@ -57,7 +57,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 					<li><?= $this->Html->link('Managers JSON index', ['controller' => 'Managers', 'action' => 'index', '_ext' => 'json']); ?></li>
 					<li><?= $this->Html->link('Managers JSON index V2', ['_name' => 'V2::Managers::index', '_ext' => 'json']); ?></li>
-					<li><?= $this->Html->link('Managers JSON index V2', ['_name' => 'V2::Managers::index', '_ext' => 'json']); ?></li>
 				</ul>
 			</div>
 		</div>
