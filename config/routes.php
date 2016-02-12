@@ -68,6 +68,15 @@ Router::scope('/', function ($routes) {
     $routes->fallbacks('DashedRoute');
 });
 
+Router::prefix('Api', function($routes) {
+    $extensions = ['json', 'xml'];
+    $routes->scope('/exports', ['controller' => 'Exports'], function ($routes) use ($extensions) {
+        $routes->extensions(array_merge($extensions, ['csv']));
+        $routes->connect('/:action', ['controller' => 'Exports']);
+    });
+    $routes->extensions($extensions);
+    $routes->fallbacks('DashedRoute');
+});
 
 /**
  * Load all plugin routes.  See the Plugin documentation on
